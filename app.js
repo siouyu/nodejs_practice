@@ -4,9 +4,14 @@ import express from "express";
 // 建立一個 Express 應用程式
 const app = express();
 
-// 設定一個路由
+// 首頁路由
 app.get("/", (req, res) => {
-	res.send("成功跑起來了");
+	res.send("歡迎來到首頁！");
+});
+
+// 關於頁面路由
+app.get("/about", (req, res) => {
+	res.send("這裡是「關於我們」的頁面");
 });
 
 // 監聽指定的埠號
