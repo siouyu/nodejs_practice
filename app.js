@@ -1,5 +1,9 @@
-// 引入 Express 模組
 import express from "express";
+import { MongoClient } from "mongodb";
+const uri =
+	"mongodb+srv://<username>:<password>@cluster0.rcs5b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const client = new MongoClient(uri);
+await client.connect();
 
 // 建立一個 Express 應用程式
 const app = express();
